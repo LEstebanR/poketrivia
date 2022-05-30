@@ -1,4 +1,4 @@
-export const getRandomElements = (Pokemons: any[]): any[] => {
+export const getRandomElements = (Pokemons: never[]) => {
   const randomElements = [];
 
   for (let i = 0; i < 4; i++) {

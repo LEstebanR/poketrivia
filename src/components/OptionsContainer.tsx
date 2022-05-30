@@ -9,7 +9,7 @@ import PokemonCard from "./PokemonCard";
 import Options from "./Options";
 import Subtitle from "./Subtitle";
 import OptionsGroup from "./OptionsGroup";
-import Score from "./Score.tsx";
+import Score from "./Score";
 
 const OptionsContainer = ({ options, pokemonData }) => {
   const [pokemon, setPokemon] = useState()

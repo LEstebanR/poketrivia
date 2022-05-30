@@ -10,10 +10,9 @@ import Button from "../components/Button";
 import Page from "../components/Page";
 import Title from "../components/Title";
 import OptionsContainer from "../components/OptionsContainer";
-import Subtitle from "../components/Subtitle";
 
 const Game = () => {
-  const [newOptions, setNewOptions] = useState()
+  const [newOptions, setNewOptions] = useState([])
   const [pokemonData, setPokemonData] = useState()
   const [pokemon, setPokemon] = useState()
   const pokemons = useQuery("pokemons", getPokemons);
