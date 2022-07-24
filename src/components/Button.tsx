@@ -10,9 +10,15 @@ const Button = styled.button`
   border: 2px solid gray;
   border-radius: 15px;
   text-decoration: none;
-  width: 100px;
+  width: 150px;
   height: 50px;
   cursor: pointer;
+    a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+  }
   
   `
 

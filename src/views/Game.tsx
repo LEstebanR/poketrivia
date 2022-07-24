@@ -32,7 +32,7 @@ const Game = () => {
       {
       pokemonData ? <OptionsContainer options={newOptions} pokemonData={pokemonData} round={round} setRound={setRound}/> : null
       }
-      <Button><Link to={'/'}>Home</Link></Button>
+      <Link to={'/'}><Button>Home</Button></Link>
     </Page>
   );
 }

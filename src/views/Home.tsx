@@ -12,7 +12,7 @@ const Home = () => {
     <Page>
       <Title>PokeTrivia</Title>
       <Text>¿Qué tanto conoces los Pokémon?</Text>
-      <Button><Link to={'/game'}>Start Game</Link></Button>
+      <Link to={'/game'}><Button>Start Game</Button></Link>
     </Page>
   );
 }

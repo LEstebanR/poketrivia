@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const OptionsGroup = styled.div`
 
-  width: 300px;
+  width: 400px;
   height: 300px;
 
 `

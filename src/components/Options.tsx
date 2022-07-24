@@ -2,15 +2,14 @@ import { Key } from "react";
 import firstLetterUpperCase from "../utils/FirstLetterUpperCase";
 import Swal from 'sweetalert2'
 import withReactContent from "sweetalert2-react-content";
-import Redirect from "react-router-dom";
-
-import Button from "./Button";
-
+import Button
+ from "./Button";
+ 
 const mySwal = withReactContent(Swal);
 
 const Options = ({ options, pokemon, setRound, round }) => {
 
-  const checkAnswer = (event) => {
+  const checkAnswer = async (event) => {
     const select = event.target.name
     if ( select === pokemon.name ){
       setRound(round + 1)
@@ -21,9 +20,9 @@ const Options = ({ options, pokemon, setRound, round }) => {
         icon: 'error',
         confirmButtonText: '¡Vuelve a intentarlo!',
         didClose: () => {
-          window.location.reload()
+          setRound(0)
         }
-     })
+      })
     }
   }
 
