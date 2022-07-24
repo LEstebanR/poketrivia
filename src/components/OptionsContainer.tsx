@@ -13,15 +13,13 @@ import Score from "./Score";
 
 const OptionsContainer = ({ options, pokemonData, round, setRound }) => {
   const [pokemon, setPokemon] = useState()
-  const pokemonQuery = useQuery("Answer", () => getPokemon(pokemonData?.url));
+  const pokemonQuery = useQuery(["Answer", pokemonData.name], () => getPokemon(pokemonData?.url));
   
   useEffect(() => {
     if (pokemonQuery.data) {
       setPokemon(pokemonQuery.data)
     }
   }, [pokemonQuery.data]);
-
-  console.log(pokemonData?.url)
 
   return (
     <>

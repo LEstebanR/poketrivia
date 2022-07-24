@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import { useQuery, useQueries } from "react-query";
 import { Link } from "react-router-dom";
-import Swal from 'sweetalert2'
 
 import { getPokemons, getPokemon } from "../utils/ReactQuery";
 import {getRandomElements, getRandomElement } from "../utils/getRandomElements";
@@ -31,7 +30,7 @@ const Game = () => {
     <Page>
       <Title>PokeTrivia</Title>
       {
-      newOptions ? <OptionsContainer options={newOptions} pokemonData={pokemonData} round={round} setRound={setRound}/> : null
+      pokemonData ? <OptionsContainer options={newOptions} pokemonData={pokemonData} round={round} setRound={setRound}/> : null
       }
       <Button><Link to={'/'}>Home</Link></Button>
     </Page>

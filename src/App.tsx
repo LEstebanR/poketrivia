@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import {
   useQuery,
   QueryClient,
@@ -6,12 +6,14 @@ import {
 } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import Root from './utils/Root';
+import { getPokemons } from './utils/ReactQuery';
 
 const queryClient = new QueryClient();
 
-const App = () => {
 
+const App = () => {
   return (
+
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} position={"bottom-right"} />
       <Root/>
